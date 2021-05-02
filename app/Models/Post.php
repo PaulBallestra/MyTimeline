@@ -9,6 +9,8 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['body'];
+
     //Pour relation en user et post
     public function user()
     {
