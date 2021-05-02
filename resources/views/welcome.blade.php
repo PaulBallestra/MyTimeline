@@ -39,6 +39,11 @@
             <!-- ACCUEIL PAGE NON CONNECTED -->
 
 
+            <h2> MyTimeline </h2>
+
+            <h3> LogIn or Register to start using MyTimeline </h3>
+            <p> You have to create an account to post in the feed </p>
+
         </div>
     </body>
 </html>
