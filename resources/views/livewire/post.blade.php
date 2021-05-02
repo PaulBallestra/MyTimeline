@@ -4,7 +4,7 @@
         <div class="">
             <div class="flex items-center justify-between">
                 <h2 class="text-lg font-semibold text-gray-900 -mt-1"> {{ $post->user->name }} </h2>
-                <small class="text-sm text-gray-700"> HEURE HUMAIN </small>
+                <small class="text-sm text-gray-700"> {{  \Carbon\Carbon::parse($post->created_at)->format('d/m/Y') }} </small>
             </div>
 
             <p class="mt-3 text-gray-700 text-sm">
