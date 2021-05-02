@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->string('body');
 
+            //ForeignKey sur l'id de User
             $table->foreignId('user_id')
                     ->constrained()
                     ->onDelete('cascade');
