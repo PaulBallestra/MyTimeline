@@ -12,7 +12,11 @@
             <div class="mt-5 md:mt-0 md:col-span-2">
 
                 @error('body')
-                    <span class="invalid-feedback"> {{ $message }}</span>
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                    <ul>
+                        <li>{{ $message }}</li>
+                    </ul>
+                </div>
                 @enderror
 
                 <form method="POST" wire:submit.prevent="createPost">
@@ -32,7 +36,8 @@
                             </div>
 
                             <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                <button type="submit"
+                                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                     Save
                                 </button>
                             </div>

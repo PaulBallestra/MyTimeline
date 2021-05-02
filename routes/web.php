@@ -13,6 +13,10 @@ Route::get('/', function () {
     return view('dashboard', ['posts' => Post::get()]);
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/user', function() {
+    return view('profile', ['user' => auth()->user()]);
+})->name('user');
+
 //Route post lors
 //Route::post('/', '\App\Http\Controllers\HomeController@createPost');
 

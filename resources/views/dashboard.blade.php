@@ -19,6 +19,13 @@
                     </div>
                 @endif
 
+                @if( session()->has('status'))
+                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+                         role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
                 <div class="p-6 bg-gray-200 border-b border-gray-200">
                     <livewire:form></livewire:form>
                 </div>
