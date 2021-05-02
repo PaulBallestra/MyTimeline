@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 //Route /
 Route::get('/dashboard', function () {
-    return view('dashboard', ['posts' => Post::get()]);
+    return view('dashboard', ['posts' => Post::get(), 'numberOfPosts' => Post::count()]);
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/user', function() {

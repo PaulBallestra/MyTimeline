@@ -28,8 +28,13 @@
                 <div class="p-6 bg-white border-b border-gray-200">
 
                     <h1 class="font-semibold text-xl text-gray-800 leading-tight text-center mb-3">
-                        Old posts
+                        Feed
                     </h1>
+
+                    <!-- Quand il n'y a rien a afficher -->
+                    @if ($numberOfPosts == 0)
+                        <p> Ooops, nothing to see here :( </p>
+                    @endif
 
                     <livewire:posts></livewire:posts>
 
