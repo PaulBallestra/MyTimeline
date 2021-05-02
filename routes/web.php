@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 //Route /
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('dashboard', ['posts' => Post::get()]);
 })->middleware(['auth'])->name('dashboard');
 

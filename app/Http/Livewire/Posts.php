@@ -14,6 +14,8 @@ class Posts extends Component
 
     public function postAdded($id){
         $this->posts->prepend(Post::find($id));
+
+        session()->flash('status', 'Post created');
     }
 
     public function mount(){
